@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import UserPool from "@/UserPool";
+import GreenLogo from '../assets/GreenLogo.png'; // Import your GreenLogo
+import PurpleLogo from '../assets/PurpleLogo.png'; // Import your PurpleLogo
+import Image from "next/image";
 
 const SignupForm = () => {
     const [email, setEmail] = useState("");
@@ -22,8 +25,20 @@ const SignupForm = () => {
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-20 lg:py-16 lg:grid-cols-12">
                 <div className="w-full p-6 mx-auto bg-white rounded-lg shadow dark:bg-gray-800 sm:max-w-xl lg:col-span-6 sm:p-8">
                     <a href="#" className="inline-flex items-center mb-4 text-xl font-semibold text-gray-900 dark:text-white">
-                        <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
-                        Flowbite    
+                    <Image 
+                        src={PurpleLogo} 
+                        width={140}   // Replace with the actual width in pixels
+                        height={32}  // Replace with the actual height in pixels
+                        alt="Logo"
+                        className="dark:hidden"  // Hide this in dark mode
+                    />
+                    <Image 
+                        src={GreenLogo} 
+                        width={140}   // Replace with the actual width in pixels
+                        height={32}  // Replace with the actual height in pixels
+                        alt="Logo"
+                        className="hidden dark:block"  // Show this only in dark mode
+                    />
                     </a>
                     <h1 className="mb-2 text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
                         Create your Account
@@ -93,10 +108,12 @@ const SignupForm = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="w-full inline-flex items-center justify-center py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:border-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                className="w-full text-white inline-flex items-center justify-center py-2.5 px-5 mr-2 mb-2 text-sm font-medium bg-dark-purple rounded-lg border border-dark-purple hover:bg-light-green focus:ring-4 focus:outline-none focus:ring-light-green dark:bg-light-green dark:border-light-green dark:hover:bg-dark-purple dark:text-black dark:focus:ring-dark-purple"
                             >
                                 Sign Up
                             </button>
+
+
                         </form>
                 </div>
                 <div className="mr-auto place-self-center lg:col-span-6">

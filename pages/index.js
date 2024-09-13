@@ -11,8 +11,6 @@ export default function Home() {
       <Hero />
       <CTA1 />
       <Footer />
-
-      <Link href="/about">Go to About Page</Link>
     </div>
   );
 }

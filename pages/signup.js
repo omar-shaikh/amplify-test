@@ -6,7 +6,7 @@ import SignupForm from '@/components/signupForm';
 
 export default function About() {
   return (
-    <div>
+    <div className='dark:bg-gray-900'>
       <Navbar />
       <SignupForm />
     </div>

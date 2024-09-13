@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const CTA1 = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 antialiased">
+    <section className="antialiased">
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-16 lg:py-24">
             <div className="grid grid-cols-1 gap-8 lg:gap-16 lg:grid-cols-2">
             <div>
